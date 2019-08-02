@@ -2,6 +2,9 @@
 
 namespace Cable8mm\BigkindsPhpClient;
 
+/**
+ * Provider Accessor for Dependency Injection to BigkinsClient
+ */
 class ProviderAccess
 {
     /**

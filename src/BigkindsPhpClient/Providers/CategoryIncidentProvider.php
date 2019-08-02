@@ -4,8 +4,18 @@ namespace Cable8mm\BigkindsPhpClient;
 
 final class CategoryIncidentProvider extends Provider implements IProvider
 {
+    /**
+     * CategoryIncident version
+     *
+     * @var string
+     */
     protected static $version = '1.39';
 
+    /**
+     * Data
+     *
+     * @var array
+     */
     protected static $providers = [
         '범죄' => '1',
         '범죄>성범죄' => '1,5',
@@ -66,16 +76,4 @@ final class CategoryIncidentProvider extends Provider implements IProvider
         '사회>사회갈등>반란_혁명_폭동' => '4,13,57',
         '사회>사회갈등>대량학살' => '4,13,58',
     ];
-
-    public function __construct(array $categories = [])
-    {
-        if (empty($providers)) {
-            return;
-        }
-
-        $this->container = array_merge(
-            $this->container,
-            $categories
-        );
-    }
 }

@@ -1,5 +1,23 @@
-# bigkinds-php-client
-이 라이브러리는 빅카인즈 빅데이터 플랫폼의 비공식 PHP용 SDK 입니다.
+# Bigkinds Php Client
+=====================
+[![Build Status](https://travis-ci.org/cable8mm/bigkinds-php-client.svg?branch=master)](https://travis-ci.org/cable8mm/bigkinds-php-client)
+[![GitHub license](https://img.shields.io/github/license/cable8mm/bigkinds-php-client)](https://github.com/cable8mm/bigkinds-php-client/blob/master/LICENSE)
 
-# changelog
-- 빅카인즈와 오류 없는 connect
+# Requirement
+-------------
+* PHP 5.5 above
+* (optional) Bigkinds Access Key
+
+# About
+-------
+bigkinds-php-client is very small-size library for PHP.
+
+If you want to know that, click https://www.bigkinds.or.kr/
+
+# Installation
+--------------
+I am preparing for easy installation for your convenience. When it is ready, we will let you know how to about it.
+composer will be used.
+
+# PSR
+bigkinds-php-client *almost* follow the PSR standard.

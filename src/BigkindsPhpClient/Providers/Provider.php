@@ -4,8 +4,18 @@ namespace Cable8mm\BigkindsPhpClient;
 
 class Provider
 {
+    /**
+     * Provider version from Provider interface class | \Cable8mm\BigkindsPhpClient\Providers\Iprovider
+     *
+     * @var string
+     */
     protected static $version;
 
+    /**
+     * Provider data from Provider interface class | \Cable8mm\BigkindsPhpClient\Providers\Iprovider
+     *
+     * @var array
+     */
     protected static $providers;
 
     public function __construct(array $providers = [])
@@ -14,8 +24,8 @@ class Provider
             return;
         }
 
-        self::$providers = array_merge(
-            self::$providers,
+        static::$providers = array_merge(
+            static::$providers,
             $providers
         );
     }

@@ -4,8 +4,18 @@ namespace Cable8mm\BigkindsPhpClient;
 
 final class ContentProvider extends Provider implements IProvider
 {
+    /**
+     * Content version
+     *
+     * @var string
+     */
     protected static $version = '1.39';
 
+    /**
+     * Data
+     *
+     * @var array
+     */
     protected static $providers = [
         '01100101' => '경향신문',
         '01100201' => '국민일보',

@@ -5,10 +5,16 @@ namespace Cable8mm\BigkindsPhpClient;
 use GuzzleHttp\Client;
 use BigkindsException;
 
+/**
+ * BigkindsClient with http client
+ * This class is useful when you request Bigkinds server.
+ */
 class BigkindsClient
 {
+    /**
+     * BigkindsClient library version
+     */
     const LIBVER = '0.1.0';
-    const USER_AGENT_SUFFIX = 'bigkinds-php-client/';
 
     /**
      * Test Base Path from Guide
@@ -35,11 +41,6 @@ class BigkindsClient
      * @var GuzzleHttp\ClientInterface
      */
     private $http;
-
-    /**
-     * @var array access token
-     */
-    private $token;
 
     /**
      * Allowed Keys via __construct()
@@ -70,7 +71,12 @@ class BigkindsClient
         $this->http = $http ?? new \GuzzleHttp\Client(['base_uri' => self::$base_path]);
     }
 
-    public function request(string $method, array $query = null): array
+    /**
+     * @param string $method
+     * @param array $query || nullable
+     * @return array
+     */
+    public function request(string $method, array $query = null)
     {
         // guard
         if (!in_array($method, self::$methods)) {
@@ -101,22 +107,13 @@ class BigkindsClient
         return self::LIBVER;
     }
 
-    public function setConfig($name, $value): void
-    {
-        $this->config[$name] = $value;
-    }
-
-    public function getConfig($name, $default = null): string
-    {
-        return isset($this->config[$name]) ? $this->config[$name] : $default;
-    }
-
     /**
      * Set the Http Client object.
      *
      * @param GuzzleHttp\ClientInterface $http
+     * @return void
      */
-    public function setHttpClient(ClientInterface $http): void
+    public function setHttpClient(ClientInterface $http)
     {
         $this->http = $http;
     }

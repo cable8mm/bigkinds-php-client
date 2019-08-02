@@ -4,8 +4,18 @@ namespace Cable8mm\BigkindsPhpClient;
 
 final class CategoryProvider extends Provider implements IProvider
 {
+    /**
+     * Category version
+     *
+     * @var string
+     */
     protected static $version = '1.39';
 
+    /**
+     * Data
+     *
+     * @var array
+     */
     protected static $providers = [
         '정치' => '001000000',
         '정치>북한' => '001001000',

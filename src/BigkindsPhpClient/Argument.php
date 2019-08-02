@@ -63,6 +63,7 @@ class Argument
                 Arr::set($this->container, 'query.' . $key, $argument);
             }
         } else {
+            // $column is string || nullable
             if (is_null($value)) {
                 Arr::set($this->container, 'query', $column);
             } else {
