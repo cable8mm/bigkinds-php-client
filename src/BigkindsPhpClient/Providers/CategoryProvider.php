@@ -2,10 +2,11 @@
 
 namespace Cable8mm\BigkindsPhpClient;
 
-class Category implements ArrayAccess
+final class CategoryProvider extends Provider implements IProvider
 {
-    const CATVER = '1.39';
-    private $container = [
+    protected static $version = '1.39';
+
+    protected static $providers = [
         '정치' => '001000000',
         '정치>북한' => '001001000',
         '정치>선거' => '001002000',
@@ -100,50 +101,4 @@ class Category implements ArrayAccess
         'IT_과학>인터넷_SNS' => '008005000',
         'IT_과학>IT_과학일반' => '008006000',
     ];
-
-    public function __construct(array $categories = [])
-    {
-        if (empty($providers)) {
-            return;
-        }
-
-        $this->container = array_merge(
-            $this->container,
-            $categories
-        );
-    }
-
-    public function offsetExists(mixed $offset): bool
-    {
-        return isset($this->container[$offset]);
-    }
-
-    public function offsetGet(mixed $offset): mixed
-    {
-        return isset($this->container[$offset]) ? $this->container[$offset] : null;
-    }
-
-    public function offsetSet(mixed $offset, mixed $value): void
-    {
-        if (is_null($offset)) {
-            $this->container[] = $value;
-        } else {
-            $this->container[$offset] = $value;
-        }
-    }
-
-    public function offsetUnset(mixed $offset): void
-    {
-        unset($this->container[$offset]);
-    }
-
-    /**
-     * Get a string containing the version of the category.
-     *
-     * @return string
-     */
-    public function getCategoryVersion()
-    {
-        return self::CATVER;
-    }
 }

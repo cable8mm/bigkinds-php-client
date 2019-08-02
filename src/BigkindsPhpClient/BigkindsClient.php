@@ -70,7 +70,7 @@ class BigkindsClient
         $this->http = $http ?? new \GuzzleHttp\Client(['base_uri' => self::$base_path]);
     }
 
-    public function request(string $method, array $query = null)
+    public function request(string $method, array $query = null): array
     {
         // guard
         if (!in_array($method, self::$methods)) {
@@ -101,12 +101,12 @@ class BigkindsClient
         return self::LIBVER;
     }
 
-    public function setConfig($name, $value)
+    public function setConfig($name, $value): void
     {
         $this->config[$name] = $value;
     }
 
-    public function getConfig($name, $default = null)
+    public function getConfig($name, $default = null): string
     {
         return isset($this->config[$name]) ? $this->config[$name] : $default;
     }
@@ -116,7 +116,7 @@ class BigkindsClient
      *
      * @param GuzzleHttp\ClientInterface $http
      */
-    public function setHttpClient(ClientInterface $http)
+    public function setHttpClient(ClientInterface $http): void
     {
         $this->http = $http;
     }

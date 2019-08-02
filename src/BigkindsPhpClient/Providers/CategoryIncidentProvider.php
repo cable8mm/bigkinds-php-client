@@ -2,10 +2,11 @@
 
 namespace Cable8mm\BigkindsPhpClient;
 
-class CategoryIncident implements ArrayAccess
+final class CategoryIncidentProvider extends Provider implements IProvider
 {
-    const CATVER = '1.39';
-    private $container = [
+    protected static $version = '1.39';
+
+    protected static $providers = [
         '범죄' => '1',
         '범죄>성범죄' => '1,5',
         '범죄>성범죄>성폭행' => '1,5,14',
@@ -76,39 +77,5 @@ class CategoryIncident implements ArrayAccess
             $this->container,
             $categories
         );
-    }
-
-    public function offsetExists(mixed $offset): bool
-    {
-        return isset($this->container[$offset]);
-    }
-
-    public function offsetGet(mixed $offset): mixed
-    {
-        return isset($this->container[$offset]) ? $this->container[$offset] : null;
-    }
-
-    public function offsetSet(mixed $offset, mixed $value): void
-    {
-        if (is_null($offset)) {
-            $this->container[] = $value;
-        } else {
-            $this->container[$offset] = $value;
-        }
-    }
-
-    public function offsetUnset(mixed $offset): void
-    {
-        unset($this->container[$offset]);
-    }
-
-    /**
-     * Get a string containing the version of the category.
-     *
-     * @return string
-     */
-    public function getCategoryVersion()
-    {
-        return self::CATVER;
     }
 }
