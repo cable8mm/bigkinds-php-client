@@ -20,6 +20,7 @@ If you want to know that, click <https://www.bigkinds.or.kr/>
 I am preparing for easy installation for your convenience. When it is ready, we will let you know how to about it.
 composer will be used.
 
-## PSR ##
+## More Informations ##
 
-bigkinds-php-client *almost* follow the PSR standard.
+* bigkinds-php-client *almost* follow the PSR standard.
+* bigkinds-php-client is based on my another toy project - [*phpunit-start-kit*](https://github.com/cable8mm/phpunit-start-kit)
