@@ -23,4 +23,4 @@ composer will be used.
 ## More Informations ##
 
 * bigkinds-php-client *almost* follow the PSR standard.
-* bigkinds-php-client is based on my another toy project - [*phpunit-start-kit*](https://github.com/cable8mm/phpunit-start-kit)
+* bigkinds-php-client is based on my another toy project - <https://github.com/cable8mm/phpunit-start-kit>
