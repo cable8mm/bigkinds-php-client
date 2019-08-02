@@ -2,6 +2,7 @@
 
 [![Build Status](https://travis-ci.org/cable8mm/bigkinds-php-client.svg?branch=master)](https://travis-ci.org/cable8mm/bigkinds-php-client)
 [![GitHub license](https://img.shields.io/github/license/cable8mm/bigkinds-php-client)](https://github.com/cable8mm/bigkinds-php-client/blob/master/LICENSE)
+[![Coding Standards](https://img.shields.io/badge/cs-PSR--2--R-yellow.svg)](https://github.com/php-fig-rectified/fig-rectified-standards)
 
 ## Requirement ##
 
