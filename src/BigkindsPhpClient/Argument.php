@@ -92,7 +92,7 @@ class Argument
      */
     public function queryByContent($value)
     {
-        return $this->query('content', $value, 'content');
+        return $this->query('content', $value);
     }
 
     /**
