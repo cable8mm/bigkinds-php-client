@@ -1,0 +1,32 @@
+{
+    "name": "cable8mm/bigkinds-php-client",
+    "description": "This library is PHP SDK for Bigkinds API",
+    "type": "library",
+    "require": {
+        "guzzlehttp/guzzle": "^6.3"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.4"
+    },
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "Sam Lee",
+            "email": "cable8mm@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "": "src/"
+        },
+        "classmap": [
+            "src/BigkindsPhpClient/"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Cable8mm\\BigkindsPhpClient\\Test\\": "tests"
+        }
+    }
+}
