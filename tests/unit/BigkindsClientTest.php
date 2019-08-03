@@ -19,12 +19,6 @@ class BigkindsClientTest extends TestCase
         $this->assertEquals($this->bigkindsClient->getLibraryVersion(), '0.1.0');
     }
 
-    public function testSetConfig()
-    {
-        $this->bigkindsClient->setConfig('testName', 'testValue');
-        $this->assertEquals($this->bigkindsClient->getConfig('testName'), 'testValue');
-    }
-
     public function testCreateBigkindsClient()
     {
         $this->assertInstanceOf(BigkindsClient::class, $this->bigkindsClient);
@@ -33,7 +27,7 @@ class BigkindsClientTest extends TestCase
     public function testCheckConstructAfterCreateBigkingsClient()
     {
         $bigkindsClient = new BigkindsClient();
-        $this->assertAttributeEquals('http://tools.kinds.or.kr:8888/search/', 'base_path', $bigkindsClient);
+        $this->assertAttributeEquals('http://tools.kinds.or.kr:8888/', 'base_path', $bigkindsClient);
         $this->assertAttributeEquals('d3a10ae3-482c-41d0-9c31-146fe526e04d', 'access_key', $bigkindsClient);
     }
 

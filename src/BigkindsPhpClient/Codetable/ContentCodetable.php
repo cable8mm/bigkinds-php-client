@@ -1,8 +1,8 @@
 <?php
 
-namespace Cable8mm\BigkindsPhpClient;
+namespace Cable8mm\BigkindsPhpClient\Codetable;
 
-final class ContentProvider extends Provider implements IProvider
+final class ContentCodetable extends Codetable implements ICodetable
 {
     /**
      * Content version
@@ -12,11 +12,11 @@ final class ContentProvider extends Provider implements IProvider
     protected static $version = '1.39';
 
     /**
-     * Data
+     * Codes - codetable
      *
      * @var array
      */
-    protected static $providers = [
+    protected static $codes = [
         '01100101' => '경향신문',
         '01100201' => '국민일보',
         '01100301' => '내일신문',

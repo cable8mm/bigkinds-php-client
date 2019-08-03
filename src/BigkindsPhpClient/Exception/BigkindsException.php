@@ -1,6 +1,6 @@
 <?php
 
-namespace Cable8mm\BigkindsPhpClient;
+namespace Cable8mm\BigkindsPhpClient\Exception;
 
 /**
  * Bigkinds base exception

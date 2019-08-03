@@ -21,7 +21,7 @@ class BigkindsClient
      *
      * @var string
      */
-    private static $base_path = 'http://tools.kinds.or.kr:8888/search/';
+    private static $base_path = 'http://tools.kinds.or.kr:8888/';
 
     /**
      * Test Access Key from Guide
@@ -52,9 +52,19 @@ class BigkindsClient
     /**
      * Allowed Method from Guide
      *
-     * @var array
+     * @var array | key:method name, value:api path
      */
-    private static $methods = ['news'];
+    private static $methods = [
+        'news' => 'search/news',
+        'issue_ranking' => 'issue_ranking',
+        'word_cloud' => 'word_cloud',
+        'time_line' => 'time_line',
+        'query_rank' => 'query_rank',
+        'quotation' => 'search/quotation',
+        'today_category_keyword' => 'today_category_keyword',
+        'feature' => 'feature',
+        'keyword' => 'keyword'
+    ];
 
     public function __construct(array $config = [], \GuzzleHttp\Client $http = null)
     {
@@ -79,7 +89,7 @@ class BigkindsClient
     public function request(string $method, array $query = null)
     {
         // guard
-        if (!in_array($method, self::$methods)) {
+        if (!array_key_exists($method, self::$methods)) {
             throw new BigkindsException('Error Not Allowed Method', 2);
         }
 
@@ -90,7 +100,7 @@ class BigkindsClient
 
         $requestBody = (string)$this->http->request(
             'POST',
-            $method,
+            self::$methods[$method],
             ['body' => json_encode($query)]
         )->getBody();
 

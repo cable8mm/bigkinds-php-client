@@ -1,8 +1,8 @@
 <?php
 
-namespace Cable8mm\BigkindsPhpClient;
+namespace Cable8mm\BigkindsPhpClient\Codetable;
 
-final class CategoryIncidentProvider extends Provider implements IProvider
+final class CategoryIncidentCodetable extends Codetable implements ICodetable
 {
     /**
      * CategoryIncident version
@@ -12,11 +12,11 @@ final class CategoryIncidentProvider extends Provider implements IProvider
     protected static $version = '1.39';
 
     /**
-     * Data
+     * Codes - codetable
      *
      * @var array
      */
-    protected static $providers = [
+    protected static $codes = [
         '범죄' => '1',
         '범죄>성범죄' => '1,5',
         '범죄>성범죄>성폭행' => '1,5,14',
