@@ -66,6 +66,7 @@ class BigkindsClientTest extends TestCase
     public function testExampleRequestViaGuide()
     {
         $news = $this->bigkindsClient->request('news', $this->getExampleRequestFormatFromGuide());
+        var_dump($news);
         $this->assertEquals($news['result'], 0);
     }
 

@@ -21,6 +21,10 @@ class QueryRankArgument extends Argument
      */
     protected function default(): array
     {
-        return [];
+        return [
+            'from' => date('Y-m-d', strtotime('-1 week')),
+            'until' => date('Y-m-d'),
+            'offset' => 5
+        ];
     }
 }

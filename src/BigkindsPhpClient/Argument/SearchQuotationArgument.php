@@ -2,7 +2,7 @@
 
 namespace Cable8mm\BigkindsPhpClient\Argument;
 
-class SearchNewsArgument extends Argument
+class SearchQuotationArgument extends Argument
 {
     /**
      *{inheritance}
@@ -14,7 +14,7 @@ class SearchNewsArgument extends Argument
         'provider' => 'array',
         'category' => 'array',
         'category_incident' => 'array',
-        'byline' => 'text',
+        'byline' => 'array',
         'provider_subject' => 'array',
         'subject_info' => 'array',
         'subject_info1' => 'array',
@@ -40,20 +40,23 @@ class SearchNewsArgument extends Argument
                 'from' => date('Y-m-d', strtotime('-1 week')),
                 'until' => date('Y-m-d')
             ],
-            'provider' => ['경향신문'],
-            'category' => ['정치>정치일반', 'IT_과학'],
+            'provider' => ['경향신문', '국민일보', '내일신문'],
+            'category' => ['정치>정치일반', '스포츠일반', 'IT_과학'],
             'category_incident' => ['범죄', '교통사고', '재해>자연재해'],
-            'byline' => '',
-            'provider_subject' => ['경제', '부동산'],
             'sort' => ['date' => 'desc'],
             'hilight' => 200,
             'return_from' => 0,
             'return_size' => 5,
             'fields' => [
+                'hilight',
                 'byline',
                 'category',
                 'category_incident',
-                'provider_news_id'
+                'images',
+                'provider_subject',
+                'subject_info',
+                'provider_news_id',
+                'publisher_code'
             ]
         ];
     }

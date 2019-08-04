@@ -33,6 +33,14 @@ abstract class Argument
      */
     protected static $allowed_and_casts = [];
 
+    protected static $default_from_type = [
+        'text' => '',
+        'int' => 0,
+        'array' => [''],
+        'boolean' => true,
+        'date' => '2019-08-05'
+    ];
+
     /**
      * output = $container->toArray()
      * with all arguments
@@ -43,20 +51,52 @@ abstract class Argument
 
     public function __construct(array $arguments = [])
     {
-        // guard
-        foreach ($arguments as $field => $argument) {
-            // guard allowed keys
-            if (!array_key_exists($field, static::$allowed_and_casts)) {
-                throw new BigkindsException('Error Not Allowed Argument', 3);
-            }
-
-            // guard type
-            if (\is_string($field) && !in_array(static::$allowed_and_casts[$field], ['text'])) {
-                throw new BigkindsExceptin('Error Not Allowed Argument Type', 4);
-            }
+        // guard empty
+        if (empty(static::$allowed_and_casts)) {
+            return;
         }
 
-//        $this->arguments = array_merge(static::default(), $arguments);
+        $forcedArguments = array_merge(static::default(), $arguments);
+
+        foreach (static::$allowed_and_casts as $key => $type) {
+            // assign forced(default + arguments) arguments
+            Arr::set($this->arguments, $key, static::$default_from_type[$type]);
+            if (!is_null($value = Arr::get($forcedArguments, $key))) {
+                // guard type
+                switch ($type) {
+                    case 'text':
+                        if (!\is_string($value)) {
+                            throw new BigkindsException('Error must STRING type', 4);
+                        }
+                    break;
+                    case 'int':
+                        if (!\is_int($value)) {
+                            throw new BigkindsException('Error must INT type', 4);
+                        }
+                    break;
+                    case 'array':
+                        if (!\is_array($value)) {
+                            throw new BigkindsException('Error must ARRAY type (' . $key . ':' . $value . ')', 4);
+                        }
+                    break;
+                    case 'boolean':
+                        if (!\is_bool($value)) {
+                            throw new BigkindsException('Error must BOOLEAN type', 4);
+                        }
+                    break;
+                    case 'date':
+                        if (!\preg_match('/^\d\d\d\d\-\d\d\-\d\d$/', $value)) {
+                            throw new BigkindsException('Error must BOOLEAN type', 4);
+                        }
+                    break;
+                    default:
+                        throw new BigkindsException('Error wrong type', 4);
+                    break;
+                }
+                // assign user(__construct) arguments
+                Arr::set($this->arguments, $key, $value);
+            }
+        }
     }
 
     /**
@@ -115,5 +155,15 @@ abstract class Argument
     public function toArray()
     {
         return $this->container;
+    }
+
+    /**
+     * Output arguments
+     *
+     * @return array
+     */
+    public function getArguments()
+    {
+        return $this->arguments;
     }
 }
