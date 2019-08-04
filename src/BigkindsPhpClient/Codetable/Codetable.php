@@ -5,14 +5,14 @@ namespace Cable8mm\BigkindsPhpClient\Codetable;
 class Codetable
 {
     /**
-     * Codetable version from Provider interface class | \Cable8mm\BigkindsPhpClient\Codetables\Iprovider
+     * Codetable version from Codetable interface class
      *
      * @var string
      */
     protected static $version;
 
     /**
-     * Provider data from Provider interface class | \Cable8mm\BigkindsPhpClient\Codetables\Iprovider
+     * Codetable data from Codetable interface class
      *
      * @var array
      */
@@ -35,7 +35,7 @@ class Codetable
      *
      * @return string
      */
-    public function getProviderVersion()
+    public function getCodetableVersion()
     {
         return static::$version;
     }

@@ -34,8 +34,8 @@ class CodetableAccess
      *
      * @return string
      */
-    public function getProviderVersion()
+    public function getCodetableVersion()
     {
-        return $this->provider->getProviderVersion();
+        return $this->codetable->getCodetableVersion();
     }
 }
