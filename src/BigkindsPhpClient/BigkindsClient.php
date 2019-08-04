@@ -4,6 +4,8 @@ namespace Cable8mm\BigkindsPhpClient;
 
 use GuzzleHttp\Client;
 use Cable8mm\BigkindsPhpClient\Exceptions\BigkindsInvalidArgumentException;
+use Cable8mm\BigkindsPhpClient\Exceptions\BigkindsRuntimeException;
+use Cable8mm\BigkindsPhpClient\Exceptions\BigkindsBadMethodCallException;
 
 /**
  * BigkindsClient with http client
@@ -62,7 +64,7 @@ class BigkindsClient
         'timeline' => 'time_line',
         'query rank' => 'query_rank',
         'search quotation' => 'search/quotation',
-        'today_category_keyword' => 'today_category_keyword',
+        'today category keyword' => 'today_category_keyword',
         'feature' => 'feature',
         'keyword' => 'keyword'
     ];
