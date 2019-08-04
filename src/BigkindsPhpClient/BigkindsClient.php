@@ -3,7 +3,7 @@
 namespace Cable8mm\BigkindsPhpClient;
 
 use GuzzleHttp\Client;
-use BigkindsException;
+use Cable8mm\BigkindsPhpClient\Exception\BigkindsException;
 
 /**
  * BigkindsClient with http client

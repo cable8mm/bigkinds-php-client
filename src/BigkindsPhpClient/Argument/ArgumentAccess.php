@@ -1,10 +1,10 @@
 <?php
 
-namespace Cable8mm\BigkindsPhpClient;
+namespace Cable8mm\BigkindsPhpClient\Argument;
 
 use ArrayHelpers\Arr;
 
-class Argument
+class ArgumentAccess
 {
     /**
      * output = $container->toArray()
@@ -14,38 +14,16 @@ class Argument
      */
     private $container = [];
 
-    public function __construct(array $arguments = [])
-    {
-        $defaults = [
-            'query' => '',
-            'published_at' => [
-                'from' => date('Y-m-d', strtotime('-1 week')),
-                'until' => date('Y-m-d')
-            ],
-            'provider' => [],
-            'category' => [],
-            'category_incident' => [],
-            'byline' => [],
-            'provider_subject' => [],
-            'subject_info' => [],
-            'subject_info1' => [],
-            'subject_info2' => [],
-            'subject_info3' => [],
-            'subject_info4' => [],
-            'sort' => ['date' => 'desc'],
-            'hilight' => 200,
-            'return_from' => 0,
-            'return_size' => 5,
-            'fields' => [
-                'byline',
-                'category',
-                'category_incident',
-                'provider_news_id'
-            ],
-        ];
+    /**
+     * Undocumented variable
+     *
+     * @var Cable8mm\BigkindsPhpClient\Argument\Argument
+     */
+    public $argument;
 
-        // init
-        $this->container = array_merge($defaults, $arguments);
+    public function __construct(Argument $argument)
+    {
+        $this->argument = $argument;
     }
 
     /**

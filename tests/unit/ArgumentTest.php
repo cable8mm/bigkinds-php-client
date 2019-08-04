@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 use PHPUnit\Framework\TestCase;
-use Cable8mm\BigkindsPhpClient\Argument;
+use Cable8mm\BigkindsPhpClient\Argument\Argument;
 
 class ArgumentTest extends TestCase
 {
@@ -17,6 +17,7 @@ class ArgumentTest extends TestCase
         $keyword = 'Good Morning';
         $Argument = new Argument();
         $container = $Argument->query($keyword)->toArray();
+        var_dump($container);
         $this->assertIsArray($container);
         $this->assertArrayHasKey('published_at', $container);
         $this->assertArrayHasKey('category', $container);
