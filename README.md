@@ -13,7 +13,24 @@
 
 bigkinds-php-client is very small-size library for PHP.
 
-If you want to know that, click <https://www.bigkinds.or.kr/>
+bigkinds-php-client make code a beatiful, elegant and simple.
+
+```php
+use Cable8mm\BigkindsPhpClient\Bigkinds;
+
+$Bigkinds = new Bigkinds();
+$news = $Bigkinds->request('news');
+```
+
+or
+
+```php
+use Cable8mm\BigkindsPhpClient\Big;
+
+$news = \Big::kinds('news') // facade class
+```
+
+If you want to know more information about Bigkinds, click <https://www.bigkinds.or.kr/>
 
 ## Installation ##
 
