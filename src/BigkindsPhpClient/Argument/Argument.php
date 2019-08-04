@@ -3,7 +3,7 @@
 namespace Cable8mm\BigkindsPhpClient\Argument;
 
 use ArrayHelpers\Arr;
-use Cable8mm\BigkindsPhpClient\Exceptions\BigkindsException;
+use Cable8mm\BigkindsPhpClient\Exceptions\BigkindsInvalidArgumentException;
 
 /**
  * Abstract Class
@@ -66,31 +66,31 @@ abstract class Argument
                 switch ($type) {
                     case 'text':
                         if (!\is_string($value)) {
-                            throw new BigkindsException('Error must STRING type', 4);
+                            throw new BigkindsInvalidArgumentException('Error must STRING type', 4);
                         }
                     break;
                     case 'int':
                         if (!\is_int($value)) {
-                            throw new BigkindsException('Error must INT type', 4);
+                            throw new BigkindsInvalidArgumentException('Error must INT type', 4);
                         }
                     break;
                     case 'array':
                         if (!\is_array($value)) {
-                            throw new BigkindsException('Error must ARRAY type (' . $key . ':' . $value . ')', 4);
+                            throw new BigkindsInvalidArgumentException('Error must ARRAY type (' . $key . ':' . $value . ')', 4);
                         }
                     break;
                     case 'boolean':
                         if (!\is_bool($value)) {
-                            throw new BigkindsException('Error must BOOLEAN type', 4);
+                            throw new BigkindsInvalidArgumentException('Error must BOOLEAN type', 4);
                         }
                     break;
                     case 'date':
                         if (!\preg_match('/^\d\d\d\d\-\d\d\-\d\d$/', $value)) {
-                            throw new BigkindsException('Error must BOOLEAN type', 4);
+                            throw new BigkindsInvalidArgumentException('Error must BOOLEAN type', 4);
                         }
                     break;
                     default:
-                        throw new BigkindsException('Error wrong type', 4);
+                        throw new BigkindsInvalidArgumentException('Error wrong type', 4);
                     break;
                 }
                 // assign user(__construct) arguments

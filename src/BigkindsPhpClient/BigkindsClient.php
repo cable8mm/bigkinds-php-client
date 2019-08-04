@@ -3,7 +3,7 @@
 namespace Cable8mm\BigkindsPhpClient;
 
 use GuzzleHttp\Client;
-use Cable8mm\BigkindsPhpClient\Exceptions\BigkindsException;
+use Cable8mm\BigkindsPhpClient\Exceptions\BigkindsInvalidArgumentException;
 
 /**
  * BigkindsClient with http client
@@ -72,7 +72,7 @@ class BigkindsClient
         if (!empty($config)) {
             foreach ($config as $k => $element) {
                 if (\in_array($element, self::$configKeys) != false) {
-                    throw new BigkindsException('Error Processing Request', 1);
+                    throw new BigkindsInvalidArgumentException('Error Processing Request', 1);
                 }
 
                 self::${$k} = $element;
@@ -96,14 +96,14 @@ class BigkindsClient
     {
         // guard
         if (!array_key_exists($method, self::$methods)) {
-            throw new BigkindsException('Error Not Allowed Method', 2);
+            throw new BigkindsBadMethodCallException('Error Not Allowed Method', 2);
         }
 
         $className = __NAMESPACE__ . '\\Argument\\' . preg_replace('/[ _]/', '', ucwords($method, '_ ')) . 'Argument';
 
         // guard
         if (!class_exists($className)) {
-            throw new BigkindsException('Error Argument not exists', 11);
+            throw new BigkindsRuntimeException('Error Argument not exists', 11);
         }
 
         $Argument = new $className($query);
