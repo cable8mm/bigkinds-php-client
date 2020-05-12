@@ -34,11 +34,11 @@ abstract class Argument
     protected static $allowed_and_casts = [];
 
     protected static $default_from_type = [
-        'text'    => '',
-        'int'     => 0,
-        'array'   => [''],
+        'text' => '',
+        'int' => 0,
+        'array' => [''],
         'boolean' => true,
-        'date'    => '2019-08-05',
+        'date' => '2019-08-05',
     ];
 
     /**
@@ -76,7 +76,7 @@ abstract class Argument
                     break;
                     case 'array':
                         if (!\is_array($value)) {
-                            throw new BigkindsInvalidArgumentException('Error must ARRAY type ('.$key.':'.$value.')', 4);
+                            throw new BigkindsInvalidArgumentException('Error must ARRAY type (' . $key . ':' . $value . ')', 4);
                         }
                     break;
                     case 'boolean':
@@ -112,14 +112,14 @@ abstract class Argument
         if (is_array($column)) {
             foreach ($column as $key => $argument) {
                 // query.title, 'Search Query'
-                Arr::set($this->container, 'query.'.$key, $argument);
+                Arr::set($this->container, 'query.' . $key, $argument);
             }
         } else {
             // $column is string || nullable
             if (is_null($value)) {
                 Arr::set($this->container, 'query', $column);
             } else {
-                Arr::set($this->container, 'query.'.$column, $value);
+                Arr::set($this->container, 'query.' . $column, $value);
             }
         }
 
