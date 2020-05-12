@@ -3,12 +3,12 @@
 namespace Cable8mm\BigkindsPhpClient\Codetable;
 
 /**
- * Codetable Accessor for Dependency Injection to BigkinsClient
+ * Codetable Accessor for Dependency Injection to BigkinsClient.
  */
 class CodetableAccess
 {
     /**
-     * Each Codetable
+     * Each Codetable.
      *
      * @var \Cable8mm\BigkindsPhpClient\Codetable
      */
@@ -20,7 +20,7 @@ class CodetableAccess
     }
 
     /**
-     * Output codetables
+     * Output codetables.
      *
      * @return array
      */

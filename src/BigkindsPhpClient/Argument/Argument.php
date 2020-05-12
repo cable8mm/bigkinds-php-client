@@ -6,44 +6,44 @@ use ArrayHelpers\Arr;
 use Cable8mm\BigkindsPhpClient\Exceptions\BigkindsInvalidArgumentException;
 
 /**
- * Abstract Class
+ * Abstract Class.
  */
 abstract class Argument
 {
     abstract protected function default(): array;
 
     /**
-     * Request array
+     * Request array.
      *
      * @var array
      */
     protected $arguments = [];
 
     /**
-     * Default argument array
+     * Default argument array.
      *
      * @var array
      */
     protected static $default_arguments = [];
 
     /**
-     * Allowed key & type || text | int | array | boolean
+     * Allowed key & type || text | int | array | boolean.
      *
      * @var array
      */
     protected static $allowed_and_casts = [];
 
     protected static $default_from_type = [
-        'text' => '',
-        'int' => 0,
-        'array' => [''],
+        'text'    => '',
+        'int'     => 0,
+        'array'   => [''],
         'boolean' => true,
-        'date' => '2019-08-05'
+        'date'    => '2019-08-05',
     ];
 
     /**
      * output = $container->toArray()
-     * with all arguments
+     * with all arguments.
      *
      * @var array
      */
@@ -76,7 +76,7 @@ abstract class Argument
                     break;
                     case 'array':
                         if (!\is_array($value)) {
-                            throw new BigkindsInvalidArgumentException('Error must ARRAY type (' . $key . ':' . $value . ')', 4);
+                            throw new BigkindsInvalidArgumentException('Error must ARRAY type ('.$key.':'.$value.')', 4);
                         }
                     break;
                     case 'boolean':
@@ -100,10 +100,11 @@ abstract class Argument
     }
 
     /**
-     * Query
+     * Query.
      *
-     * @param mixed $column
+     * @param mixed  $column
      * @param string $value
+     *
      * @return \Cable8mm\BigkindsPhpClient\Argument
      */
     public function query($column, $value = null)
@@ -111,14 +112,14 @@ abstract class Argument
         if (is_array($column)) {
             foreach ($column as $key => $argument) {
                 // query.title, 'Search Query'
-                Arr::set($this->container, 'query.' . $key, $argument);
+                Arr::set($this->container, 'query.'.$key, $argument);
             }
         } else {
             // $column is string || nullable
             if (is_null($value)) {
                 Arr::set($this->container, 'query', $column);
             } else {
-                Arr::set($this->container, 'query.' . $column, $value);
+                Arr::set($this->container, 'query.'.$column, $value);
             }
         }
 
@@ -126,9 +127,10 @@ abstract class Argument
     }
 
     /**
-     * Query by title
+     * Query by title.
      *
      * @param string $value
+     *
      * @return \Cable8mm\BigkindsPhpClient\Argument
      */
     public function queryByTitle($value)
@@ -137,9 +139,10 @@ abstract class Argument
     }
 
     /**
-     * Query by content
+     * Query by content.
      *
      * @param string $value
+     *
      * @return \Cable8mm\BigkindsPhpClient\Argument
      */
     public function queryByContent($value)
@@ -148,7 +151,7 @@ abstract class Argument
     }
 
     /**
-     * Return argument array
+     * Return argument array.
      *
      * @return array
      */
@@ -158,7 +161,7 @@ abstract class Argument
     }
 
     /**
-     * Output arguments
+     * Output arguments.
      *
      * @return array
      */

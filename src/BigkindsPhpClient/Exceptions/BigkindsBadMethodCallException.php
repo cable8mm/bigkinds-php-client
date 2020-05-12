@@ -3,7 +3,7 @@
 namespace Cable8mm\BigkindsPhpClient\Exceptions;
 
 /**
- * Bigkinds BadMethodCallException
+ * Bigkinds BadMethodCallException.
  */
 class BigkindsBadMethodCallException extends \BadMethodCallException
 {

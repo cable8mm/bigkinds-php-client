@@ -5,10 +5,11 @@ namespace Cable8mm\BigkindsPhpClient;
 class Big
 {
     /**
-     * Big::kinds Facade
+     * Big::kinds Facade.
      *
      * @param string $method
-     * @param array $options
+     * @param array  $options
+     *
      * @return array
      */
     public static function kinds(string $method, $options = [])

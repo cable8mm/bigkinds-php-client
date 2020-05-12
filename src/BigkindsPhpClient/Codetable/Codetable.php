@@ -5,14 +5,14 @@ namespace Cable8mm\BigkindsPhpClient\Codetable;
 class Codetable
 {
     /**
-     * Codetable version from Codetable interface class
+     * Codetable version from Codetable interface class.
      *
      * @var string
      */
     protected static $version;
 
     /**
-     * Codetable data from Codetable interface class
+     * Codetable data from Codetable interface class.
      *
      * @var array
      */
@@ -41,7 +41,7 @@ class Codetable
     }
 
     /**
-     * Output codetables
+     * Output codetables.
      *
      * @return array
      */

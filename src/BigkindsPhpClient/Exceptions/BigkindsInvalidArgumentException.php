@@ -3,7 +3,7 @@
 namespace Cable8mm\BigkindsPhpClient\Exceptions;
 
 /**
- * Bigkinds InvalidArgumentException
+ * Bigkinds InvalidArgumentException.
  */
 class BigkindsInvalidArgumentException extends \InvalidArgumentException
 {

@@ -2,8 +2,8 @@
 
 declare(strict_types=1);
 
-use PHPUnit\Framework\TestCase;
 use Cable8mm\BigkindsPhpClient\BigkindsClient;
+use PHPUnit\Framework\TestCase;
 
 class BigkindsClientTest extends TestCase
 {
@@ -128,6 +128,7 @@ class BigkindsClientTest extends TestCase
    }
 }
 EOT;
+
         return json_decode($format, true);
     }
 }
