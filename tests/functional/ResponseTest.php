@@ -61,7 +61,6 @@ class ResponseTest extends TestCase
     public function testSearchNews()
     {
         $bigkinds = $this->bigkindsClient->request('search news');
-        print_r($bigkinds);
         $this->assertEquals($bigkinds['result'], 0);
     }
 

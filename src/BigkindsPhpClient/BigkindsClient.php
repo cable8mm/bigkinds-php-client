@@ -119,7 +119,6 @@ class BigkindsClient
         $options = [
             'body' => json_encode($query),
         ];
-        print_r(json_encode($query, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
 
         $requestBody = (string) $this->http->request(
             'POST',

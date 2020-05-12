@@ -49,7 +49,7 @@ class BigkindsClientTest extends TestCase
         // 가이드 예제에 따름
         $requestFormat = $this->getExampleRequestFormatFromGuide();
 
-        $this->assertNotEquals($requestFormat['access_key'], 'd3a10ae3-482c-41d0-9c31-146fe526e04d');
+        $this->assertEquals('d3a10ae3-482c-41d0-9c31-146fe526e04d', $requestFormat['access_key']);
     }
 
     // http://tools.kinds.or.kr:8888/search/news
@@ -57,7 +57,7 @@ class BigkindsClientTest extends TestCase
     public function testExampleRequestViaGuide()
     {
         $news = $this->bigkindsClient->request('news', $this->getExampleRequestFormatFromGuide());
-        $this->assertNotEquals($news['result'], 0);
+        $this->assertEquals($news['result'], 0);
     }
 
     private function getExampleRequestFormatFromGuide()
