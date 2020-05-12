@@ -20,9 +20,9 @@ class ResponseTest extends TestCase
     {
         $faker = Factory::create();
         $result = $this->bigkindsClient->request('keyword', [
-            'title'     => $faker->title,
+            'title' => $faker->title,
             'sub_title' => $faker->title,
-            'content'   => $faker->text(100),
+            'content' => $faker->text(100),
         ]);
         $this->assertIsArray($result);
     }
@@ -31,9 +31,9 @@ class ResponseTest extends TestCase
     {
         $faker = Factory::create();
         $inputs = [
-            'title'     => $faker->title,
+            'title' => $faker->title,
             'sub_title' => $faker->title,
-            'content'   => $faker->text,
+            'content' => $faker->text,
         ];
         $result = Big::kinds('keyword', $inputs);
         $this->assertIsArray($result);

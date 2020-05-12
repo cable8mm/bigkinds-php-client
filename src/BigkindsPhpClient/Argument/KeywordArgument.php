@@ -8,9 +8,9 @@ class KeywordArgument extends Argument
      * {inheritance}.
      */
     protected static $allowed_and_casts = [
-        'title'     => 'text',
+        'title' => 'text',
         'sub_title' => 'text',
-        'content'   => 'text',
+        'content' => 'text',
     ];
 
     /**

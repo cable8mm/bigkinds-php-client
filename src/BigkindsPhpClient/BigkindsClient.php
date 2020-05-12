@@ -57,16 +57,16 @@ class BigkindsClient
      * @var array | key:method name, value:api path
      */
     private static $methods = [
-        'search news'            => 'search/news',
-        'news'                   => 'search/news',
-        'issue ranking'          => 'issue_ranking',
-        'word cloud'             => 'word_cloud',
-        'timeline'               => 'time_line',
-        'query rank'             => 'query_rank',
-        'search quotation'       => 'search/quotation',
+        'search news' => 'search/news',
+        'news' => 'search/news',
+        'issue ranking' => 'issue_ranking',
+        'word cloud' => 'word_cloud',
+        'timeline' => 'time_line',
+        'query rank' => 'query_rank',
+        'search quotation' => 'search/quotation',
         'today category keyword' => 'today_category_keyword',
-        'feature'                => 'feature',
-        'keyword'                => 'keyword',
+        'feature' => 'feature',
+        'keyword' => 'keyword',
     ];
 
     public function __construct(array $config = [], \GuzzleHttp\Client $http = null)
@@ -102,7 +102,7 @@ class BigkindsClient
             throw new BigkindsBadMethodCallException('Error Not Allowed Method', 2);
         }
 
-        $className = __NAMESPACE__.'\\Argument\\'.preg_replace('/[ _]/', '', ucwords($method, '_ ')).'Argument';
+        $className = __NAMESPACE__ . '\\Argument\\' . preg_replace('/[ _]/', '', ucwords($method, '_ ')) . 'Argument';
 
         // guard
         if (!class_exists($className)) {
@@ -113,7 +113,7 @@ class BigkindsClient
 
         $query = [
             'access_key' => self::$access_key,
-            'argument'   => $Argument->getArguments(),
+            'argument' => $Argument->getArguments(),
         ];
 
         $options = [
