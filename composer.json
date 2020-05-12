@@ -3,7 +3,7 @@
     "description": "This library is PHP SDK for Bigkinds API",
     "type": "library",
     "require": {
-        "php": ">=5.5",
+        "php": ">=7.1",
         "guzzlehttp/guzzle": "~6.0",
         "jdrieghe/array-helpers": ">=0.2.0"
     },
