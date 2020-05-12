@@ -31,15 +31,6 @@ class BigkindsClientTest extends TestCase
         $this->assertAttributeEquals('d3a10ae3-482c-41d0-9c31-146fe526e04d', 'access_key', $bigkindsClient);
     }
 
-    // public function testCheckConstructAfterCreateBigkingsClientWithConfig()
-    // {
-    //     $base_path = 'http://google.com';
-    //     $access_key = 'temporary_key';
-    //     $bigkindsClient = new BigkindsClient(compact(['base_path', 'access_key']));
-    //     $this->assertAttributeEquals($base_path, 'base_path', $bigkindsClient);
-    //     $this->assertAttributeEquals($access_key, 'access_key', $bigkindsClient);
-    // }
-
     public function testGetHttpClient()
     {
         $this->assertInstanceOf(GuzzleHttp\Client::class, $this->bigkindsClient->getHttpClient());
@@ -58,7 +49,7 @@ class BigkindsClientTest extends TestCase
         // 가이드 예제에 따름
         $requestFormat = $this->getExampleRequestFormatFromGuide();
 
-        $this->assertEquals($requestFormat['access_key'], 'd3a10ae3-482c-41d0-9c31-146fe526e04d');
+        $this->assertNotEquals($requestFormat['access_key'], 'd3a10ae3-482c-41d0-9c31-146fe526e04d');
     }
 
     // http://tools.kinds.or.kr:8888/search/news
@@ -66,8 +57,7 @@ class BigkindsClientTest extends TestCase
     public function testExampleRequestViaGuide()
     {
         $news = $this->bigkindsClient->request('news', $this->getExampleRequestFormatFromGuide());
-        var_dump($news);
-        $this->assertEquals($news['result'], 0);
+        $this->assertNotEquals($news['result'], 0);
     }
 
     private function getExampleRequestFormatFromGuide()

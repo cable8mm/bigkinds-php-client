@@ -49,14 +49,12 @@ class ResponseTest extends TestCase
         // $this->assertIsArray($result);
 
         $result = $this->bigkindsClient->request('today_category_keyword');
-        var_dump($result);
         $this->assertIsArray($result);
     }
 
     public function testSearchInterface()
     {
         $bigkinds = $this->bigkindsClient->request('search quotation');
-        print_r($bigkinds);
         $this->assertEquals($bigkinds['result'], 0);
     }
 
@@ -70,35 +68,30 @@ class ResponseTest extends TestCase
     public function testNews()
     {
         $bigkinds = $this->bigkindsClient->request('news');
-        print_r($bigkinds);
         $this->assertEquals($bigkinds['result'], 0);
     }
 
     public function testIssueRanking()
     {
         $bigkinds = $this->bigkindsClient->request('issue ranking');
-        print_r($bigkinds);
         $this->assertEquals($bigkinds['result'], 0);
     }
 
     public function testWordCloud()
     {
         $bigkinds = $this->bigkindsClient->request('word cloud');
-        print_r($bigkinds);
         $this->assertEquals($bigkinds['result'], 0);
     }
 
     public function testTimeLine()
     {
         $bigkinds = $this->bigkindsClient->request('timeline');
-        print_r($bigkinds);
         $this->assertEquals($bigkinds['result'], 0);
     }
 
     public function testQueryRank()
     {
         $bigkinds = $this->bigkindsClient->request('query rank');
-        print_r($bigkinds);
         $this->assertEquals($bigkinds['result'], 0);
     }
 }
