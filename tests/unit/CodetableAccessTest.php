@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-use PHPUnit\Framework\TestCase;
 use Cable8mm\BigkindsPhpClient\Codetable\CategoryCodetable;
 use Cable8mm\BigkindsPhpClient\Codetable\CategoryIncidentCodetable;
 use Cable8mm\BigkindsPhpClient\Codetable\CodetableAccess;
-use Cable8mm\BigkindsPhpClient\Codetable\ICodetable;
 use Cable8mm\BigkindsPhpClient\Codetable\ContentCodetable;
+use Cable8mm\BigkindsPhpClient\Codetable\ICodetable;
+use PHPUnit\Framework\TestCase;
 
 class CodetableAccessTest extends TestCase
 {
@@ -26,7 +26,7 @@ class CodetableAccessTest extends TestCase
 
     public function testGetDataFromCodetable()
     {
-        $CodetableAccess = new CodetableAccess(new ContentCodetable);
+        $CodetableAccess = new CodetableAccess(new ContentCodetable());
         $this->assertInstanceOf(ICodetable::class, $CodetableAccess->codetable);
         $this->assertIsArray($CodetableAccess->getAll());
     }

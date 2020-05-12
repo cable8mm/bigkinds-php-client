@@ -5,7 +5,7 @@ namespace Cable8mm\BigkindsPhpClient\Argument;
 class TodayCategoryKeywordArgument extends Argument
 {
     /**
-     * {inheritance}
+     * {inheritance}.
      */
     protected function default(): array
     {

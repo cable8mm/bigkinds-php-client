@@ -5,14 +5,14 @@ namespace Cable8mm\BigkindsPhpClient\Codetable;
 final class ContentCodetable extends Codetable implements ICodetable
 {
     /**
-     * Content version
+     * Content version.
      *
      * @var string
      */
     protected static $version = '1.39';
 
     /**
-     * Codes - codetable
+     * Codes - codetable.
      *
      * @var array
      */

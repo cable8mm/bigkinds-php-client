@@ -5,15 +5,15 @@ namespace Cable8mm\BigkindsPhpClient\Argument;
 class IssueRankingArgument extends Argument
 {
     /**
-     *{inheritance}
+     *{inheritance}.
      */
     protected static $allowed_and_casts = [
-        'date' => 'date',
+        'date'             => 'date',
         'provider_subject' => 'array',
     ];
 
     /**
-     * {inheritance}
+     * {inheritance}.
      */
     protected function default(): array
     {

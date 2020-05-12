@@ -3,7 +3,7 @@
 namespace Cable8mm\BigkindsPhpClient\Exceptions;
 
 /**
- * Bigkinds RuntimeException
+ * Bigkinds RuntimeException.
  */
 class BigkindsRuntimeException extends \RuntimeException
 {

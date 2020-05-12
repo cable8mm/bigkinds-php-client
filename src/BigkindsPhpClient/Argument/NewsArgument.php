@@ -5,22 +5,22 @@ namespace Cable8mm\BigkindsPhpClient\Argument;
 class NewsArgument extends Argument
 {
     /**
-     *{inheritance}
+     *{inheritance}.
      */
     protected static $allowed_and_casts = [
         'news_ids' => 'array',
-        'fields' => 'array',
+        'fields'   => 'array',
     ];
 
     /**
-     * {inheritance}
+     * {inheritance}.
      */
     protected function default(): array
     {
         // via guide
         return [
             'news_ids' => ['01500701.2015083110018412570', '01100701.20150826100000152'],
-            'fields' => [
+            'fields'   => [
                 'content',
                 'byline',
                 'category',
@@ -28,7 +28,7 @@ class NewsArgument extends Argument
                 'images',
                 'provider_subject',
                 'provider_news_id',
-                'publisher_code'
+                'publisher_code',
             ],
         ];
     }
