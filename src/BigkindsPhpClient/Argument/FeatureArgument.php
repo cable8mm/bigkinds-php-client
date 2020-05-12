@@ -10,9 +10,9 @@ class FeatureArgument extends Argument
      * @var array
      */
     protected static $allowed_and_casts = [
-        'title' => 'text',
+        'title'     => 'text',
         'sub_title' => 'text',
-        'content' => 'text'
+        'content'   => 'text',
     ];
 
     /**

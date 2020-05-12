@@ -8,7 +8,7 @@ class IssueRankingArgument extends Argument
      *{inheritance}.
      */
     protected static $allowed_and_casts = [
-        'date' => 'date',
+        'date'             => 'date',
         'provider_subject' => 'array',
     ];
 

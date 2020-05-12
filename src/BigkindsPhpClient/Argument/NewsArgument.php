@@ -9,7 +9,7 @@ class NewsArgument extends Argument
      */
     protected static $allowed_and_casts = [
         'news_ids' => 'array',
-        'fields' => 'array',
+        'fields'   => 'array',
     ];
 
     /**
@@ -20,7 +20,7 @@ class NewsArgument extends Argument
         // via guide
         return [
             'news_ids' => ['01500701.2015083110018412570', '01100701.20150826100000152'],
-            'fields' => [
+            'fields'   => [
                 'content',
                 'byline',
                 'category',
