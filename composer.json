@@ -31,5 +31,10 @@
         "psr-4": {
             "Cable8mm\\BigkindsPhpClient\\Test\\": "tests"
         }
+    },
+    "scripts": {
+        "test": [
+            "./vendor/bin/phpunit tests"
+        ]
     }
 }
