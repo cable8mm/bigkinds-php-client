@@ -7,7 +7,7 @@
 
 ## Requirement
 
-- PHP 5.5 above
+- PHP 7.2 above
 - (optional) Bigkinds Access Key
 
 ## About
