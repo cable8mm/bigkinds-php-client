@@ -34,11 +34,11 @@ abstract class Argument
     protected static $allowed_and_casts = [];
 
     protected static $default_from_type = [
-        'text'    => '',
-        'int'     => 0,
-        'array'   => [''],
+        'text' => '',
+        'int' => 0,
+        'array' => [''],
         'boolean' => true,
-        'date'    => '2019-08-05',
+        'date' => '2019-08-05',
     ];
 
     /**
