@@ -10,9 +10,9 @@ class QueryRankArgument extends Argument
      * @var array
      */
     protected static $allowed_and_casts = [
-        'from' => 'date',
-        'until' => 'date',
-        'offset' => 'int',
+        'from'              => 'date',
+        'until'             => 'date',
+        'offset'            => 'int',
         'target_access_key' => 'text',
     ];
 
@@ -22,8 +22,8 @@ class QueryRankArgument extends Argument
     protected function default(): array
     {
         return [
-            'from' => date('Y-m-d', strtotime('-1 week')),
-            'until' => date('Y-m-d'),
+            'from'   => date('Y-m-d', strtotime('-1 week')),
+            'until'  => date('Y-m-d'),
             'offset' => 5,
         ];
     }
