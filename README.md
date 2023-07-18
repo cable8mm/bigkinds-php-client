@@ -1,6 +1,6 @@
 # Bigkinds Php Client
 
-[![Build](https://github.com/cable8mm/bigkinds-php-client/actions/workflows/php.yml/badge.svg)](https://github.com/cable8mm/bigkinds-php-client/actions/workflows/php.yml)
+[![Test](https://github.com/cable8mm/bigkinds-php-client/actions/workflows/php.yml/badge.svg)](https://github.com/cable8mm/bigkinds-php-client/actions/workflows/php.yml)
 [![PHP Linting (Pint)](https://github.com/cable8mm/bigkinds-php-client/actions/workflows/lint.yml/badge.svg)](https://github.com/cable8mm/bigkinds-php-client/actions/workflows/lint.yml)
 [![GitHub license](https://img.shields.io/github/license/cable8mm/bigkinds-php-client)](https://github.com/cable8mm/bigkinds-php-client/blob/master/LICENSE)
 [![Coding Standards](https://img.shields.io/badge/cs-PSR--2--R-yellow.svg)](https://github.com/php-fig-rectified/fig-rectified-standards)
@@ -35,8 +35,9 @@ If you want to know more information about Bigkinds, click <https://www.bigkinds
 
 ## Installation
 
-I am preparing for easy installation for your convenience. When it is ready, we will let you know how to about it.
-composer will be used.
+```bash
+composer require cable8mm/bigkinds-php-client
+```
 
 ## More Informations
 
