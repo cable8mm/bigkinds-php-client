@@ -71,7 +71,7 @@ class BigkindsClient
 
     public function __construct(array $config = [], \GuzzleHttp\Client $http = null)
     {
-        if (!empty($config)) {
+        if (! empty($config)) {
             foreach ($config as $k => $element) {
                 if (\in_array($element, self::$configKeys) != false) {
                     throw new BigkindsInvalidArgumentException('Error Processing Request', 1);
@@ -90,22 +90,20 @@ class BigkindsClient
     }
 
     /**
-     * @param string $method
-     * @param array  $query  || nullable
-     *
+     * @param  array  $query  || nullable
      * @return array
      */
     public function request(string $method, array $query = [])
     {
         // guard
-        if (!array_key_exists($method, self::$methods)) {
+        if (! array_key_exists($method, self::$methods)) {
             throw new BigkindsBadMethodCallException('Error Not Allowed Method', 2);
         }
 
-        $className = __NAMESPACE__ . '\\Argument\\' . preg_replace('/[ _]/', '', ucwords($method, '_ ')) . 'Argument';
+        $className = __NAMESPACE__.'\\Argument\\'.preg_replace('/[ _]/', '', ucwords($method, '_ ')).'Argument';
 
         // guard
-        if (!class_exists($className)) {
+        if (! class_exists($className)) {
             throw new BigkindsRuntimeException('Error Argument not exists', 11);
         }
 
@@ -142,8 +140,7 @@ class BigkindsClient
     /**
      * Set the Http Client object.
      *
-     * @param GuzzleHttp\ClientInterface $http
-     *
+     * @param  GuzzleHttp\ClientInterface  $http
      * @return void
      */
     public function setHttpClient(ClientInterface $http)
