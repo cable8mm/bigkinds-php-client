@@ -61,37 +61,37 @@ abstract class Argument
         foreach (static::$allowed_and_casts as $key => $type) {
             // assign forced(default + arguments) arguments
             Arr::set($this->arguments, $key, static::$default_from_type[$type]);
-            if (!is_null($value = Arr::get($forcedArguments, $key))) {
+            if (! is_null($value = Arr::get($forcedArguments, $key))) {
                 // guard type
                 switch ($type) {
                     case 'text':
-                        if (!\is_string($value)) {
+                        if (! \is_string($value)) {
                             throw new BigkindsInvalidArgumentException('Error must STRING type', 4);
                         }
-                    break;
+                        break;
                     case 'int':
-                        if (!\is_int($value)) {
+                        if (! \is_int($value)) {
                             throw new BigkindsInvalidArgumentException('Error must INT type', 4);
                         }
-                    break;
+                        break;
                     case 'array':
-                        if (!\is_array($value)) {
-                            throw new BigkindsInvalidArgumentException('Error must ARRAY type (' . $key . ':' . $value . ')', 4);
+                        if (! \is_array($value)) {
+                            throw new BigkindsInvalidArgumentException('Error must ARRAY type ('.$key.':'.$value.')', 4);
                         }
-                    break;
+                        break;
                     case 'boolean':
-                        if (!\is_bool($value)) {
+                        if (! \is_bool($value)) {
                             throw new BigkindsInvalidArgumentException('Error must BOOLEAN type', 4);
                         }
-                    break;
+                        break;
                     case 'date':
-                        if (!\preg_match('/^\d\d\d\d\-\d\d\-\d\d$/', $value)) {
+                        if (! \preg_match('/^\d\d\d\d\-\d\d\-\d\d$/', $value)) {
                             throw new BigkindsInvalidArgumentException('Error must BOOLEAN type', 4);
                         }
-                    break;
+                        break;
                     default:
                         throw new BigkindsInvalidArgumentException('Error wrong type', 4);
-                    break;
+                        break;
                 }
                 // assign user(__construct) arguments
                 Arr::set($this->arguments, $key, $value);
@@ -102,9 +102,8 @@ abstract class Argument
     /**
      * Query.
      *
-     * @param mixed  $column
-     * @param string $value
-     *
+     * @param  mixed  $column
+     * @param  string  $value
      * @return \Cable8mm\BigkindsPhpClient\Argument
      */
     public function query($column, $value = null)
@@ -112,14 +111,14 @@ abstract class Argument
         if (is_array($column)) {
             foreach ($column as $key => $argument) {
                 // query.title, 'Search Query'
-                Arr::set($this->container, 'query.' . $key, $argument);
+                Arr::set($this->container, 'query.'.$key, $argument);
             }
         } else {
             // $column is string || nullable
             if (is_null($value)) {
                 Arr::set($this->container, 'query', $column);
             } else {
-                Arr::set($this->container, 'query.' . $column, $value);
+                Arr::set($this->container, 'query.'.$column, $value);
             }
         }
 
@@ -129,8 +128,7 @@ abstract class Argument
     /**
      * Query by title.
      *
-     * @param string $value
-     *
+     * @param  string  $value
      * @return \Cable8mm\BigkindsPhpClient\Argument
      */
     public function queryByTitle($value)
@@ -141,8 +139,7 @@ abstract class Argument
     /**
      * Query by content.
      *
-     * @param string $value
-     *
+     * @param  string  $value
      * @return \Cable8mm\BigkindsPhpClient\Argument
      */
     public function queryByContent($value)
