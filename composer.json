@@ -3,38 +3,42 @@
     "description": "This library is PHP SDK for Bigkinds API",
     "type": "library",
     "require": {
-        "php": ">=7.2",
+        "php": "^7.4|^8.0",
         "guzzlehttp/guzzle": "~6.0",
         "jdrieghe/array-helpers": ">=0.2.0"
     },
     "require-dev": {
-        "phpunit/phpunit": "^7.4",
-        "fzaninotto/faker": "^1.8"
+        "phpunit/phpunit": "^10.2",
+        "laravel/pint": "^1.10"
     },
     "license": "Apache-2.0",
     "authors": [
         {
             "name": "Sam Lee",
-            "email": "cable8mm@gmail.com"
+            "email": "cable8mm@gmail.com",
+            "role": "Developer"
         }
     ],
     "minimum-stability": "stable",
     "autoload": {
         "psr-4": {
-            "": "src/"
+            "Cable8mm\\BigkindsPhpClient\\": "src/"
         },
         "classmap": [
-            "src/BigkindsPhpClient/"
+            "src/"
         ]
     },
     "autoload-dev": {
         "psr-4": {
-            "Cable8mm\\BigkindsPhpClient\\Test\\": "tests"
+            "Cable8mm\\BigkindsPhpClient\\Test\\": "tests/"
         }
     },
     "scripts": {
         "test": [
             "./vendor/bin/phpunit tests"
+        ],
+        "lint": [
+            "./vendor/bin/pint"
         ]
     }
 }
