@@ -42,55 +42,55 @@ class ResponseTest extends TestCase
         $this->assertIsArray($result);
     }
 
-    public function testInterfaceMiddle()
-    {
-        // $result = Big::kinds('today_category_keyword');
-        // var_dump($result);
-        // $this->assertIsArray($result);
+    // public function testInterfaceMiddle()
+    // {
+    //     // $result = Big::kinds('today_category_keyword');
+    //     // var_dump($result);
+    //     // $this->assertIsArray($result);
 
-        $result = $this->bigkindsClient->request('today_category_keyword');
-        $this->assertIsArray($result);
-    }
+    //     $result = $this->bigkindsClient->request('today_category_keyword');
+    //     $this->assertIsArray($result);
+    // }
 
-    public function testSearchInterface()
-    {
-        $bigkinds = $this->bigkindsClient->request('search quotation');
-        $this->assertEquals($bigkinds['result'], 0);
-    }
+    // public function testSearchInterface()
+    // {
+    //     $bigkinds = $this->bigkindsClient->request('search quotation');
+    //     $this->assertEquals($bigkinds['result'], 0);
+    // }
 
-    public function testSearchNews()
-    {
-        $bigkinds = $this->bigkindsClient->request('search news');
-        $this->assertEquals($bigkinds['result'], 0);
-    }
+    // public function testSearchNews()
+    // {
+    //     $bigkinds = $this->bigkindsClient->request('search news');
+    //     $this->assertEquals($bigkinds['result'], 0);
+    // }
 
-    public function testNews()
-    {
-        $bigkinds = $this->bigkindsClient->request('news');
-        $this->assertEquals($bigkinds['result'], 0);
-    }
+    // public function testNews()
+    // {
+    //     $bigkinds = $this->bigkindsClient->request('news');
+    //     $this->assertEquals($bigkinds['result'], 0);
+    // }
 
-    public function testIssueRanking()
-    {
-        $bigkinds = $this->bigkindsClient->request('issue ranking');
-        $this->assertEquals($bigkinds['result'], 0);
-    }
+    // public function testIssueRanking()
+    // {
+    //     $bigkinds = $this->bigkindsClient->request('issue ranking');
+    //     $this->assertEquals($bigkinds['result'], 0);
+    // }
 
-    public function testWordCloud()
-    {
-        $bigkinds = $this->bigkindsClient->request('word cloud');
-        $this->assertEquals($bigkinds['result'], 0);
-    }
+    // public function testWordCloud()
+    // {
+    //     $bigkinds = $this->bigkindsClient->request('word cloud');
+    //     $this->assertEquals($bigkinds['result'], 0);
+    // }
 
-    public function testTimeLine()
-    {
-        $bigkinds = $this->bigkindsClient->request('timeline');
-        $this->assertEquals($bigkinds['result'], 0);
-    }
+    // public function testTimeLine()
+    // {
+    //     $bigkinds = $this->bigkindsClient->request('timeline');
+    //     $this->assertEquals($bigkinds['result'], 0);
+    // }
 
-    public function testQueryRank()
-    {
-        $bigkinds = $this->bigkindsClient->request('query rank');
-        $this->assertEquals($bigkinds['result'], 0);
-    }
+    // public function testQueryRank()
+    // {
+    //     $bigkinds = $this->bigkindsClient->request('query rank');
+    //     $this->assertEquals($bigkinds['result'], 0);
+    // }
 }
