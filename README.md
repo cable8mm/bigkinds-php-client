@@ -35,8 +35,9 @@ If you want to know more information about Bigkinds, click <https://www.bigkinds
 
 ## Installation
 
-I am preparing for easy installation for your convenience. When it is ready, we will let you know how to about it.
-composer will be used.
+```bash
+composer require cable8mm/bigkinds-php-client
+```
 
 ## More Informations
 
