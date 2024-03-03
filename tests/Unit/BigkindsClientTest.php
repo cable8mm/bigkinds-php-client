@@ -1,6 +1,6 @@
 <?php
 
-declare(strict_types=1);
+namespace Cable8mm\BigkindsPhpClient\Tests\Unit;
 
 use Cable8mm\BigkindsPhpClient\BigkindsClient;
 use PHPUnit\Framework\TestCase;
@@ -33,7 +33,7 @@ class BigkindsClientTest extends TestCase
 
     public function testGetHttpClient()
     {
-        $this->assertInstanceOf(GuzzleHttp\Client::class, $this->bigkindsClient->getHttpClient());
+        $this->assertInstanceOf(\GuzzleHttp\Client::class, $this->bigkindsClient->getHttpClient());
     }
 
     public function testRequestFormat()

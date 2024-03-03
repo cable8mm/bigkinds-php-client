@@ -1,6 +1,6 @@
 <?php
 
-declare(strict_types=1);
+namespace Cable8mm\BigkindsPhpClient\Tests\Unit;
 
 use Cable8mm\BigkindsPhpClient\Argument\FeatureArgument;
 use PHPUnit\Framework\TestCase;
