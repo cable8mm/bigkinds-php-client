@@ -69,7 +69,7 @@ class BigkindsClient
         'keyword' => 'keyword',
     ];
 
-    public function __construct(array $config = [], \GuzzleHttp\Client $http = null)
+    public function __construct(array $config = [], ?\GuzzleHttp\Client $http = null)
     {
         if (! empty($config)) {
             foreach ($config as $k => $element) {
