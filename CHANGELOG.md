@@ -1,5 +1,13 @@
 # Release Notes
 
+## v0.9.1 - 2024-03-03
+
+### What's Changed
+
+* Change the license from apache to MIT by [@cable8mm](https://github.com/cable8mm) in https://github.com/cable8mm/bigkinds-php-client/pull/17
+
+**Full Changelog**: https://github.com/cable8mm/bigkinds-php-client/compare/v0.9.0...v0.9.1
+
 ## v0.9.0 - 2024-03-03
 
 ### What's Changed
