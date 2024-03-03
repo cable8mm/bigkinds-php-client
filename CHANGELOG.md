@@ -1,5 +1,18 @@
 # Release Notes
 
+## v0.9.0 - 2024-03-03
+
+### What's Changed
+
+* installation in README by [@cable8mm](https://github.com/cable8mm) in https://github.com/cable8mm/bigkinds-php-client/pull/11
+* Fix namespace with composer config by [@cable8mm](https://github.com/cable8mm) in https://github.com/cable8mm/bigkinds-php-client/pull/12
+* Remove composer lock and actions by [@cable8mm](https://github.com/cable8mm) in https://github.com/cable8mm/bigkinds-php-client/pull/13
+* Add new github actions by [@cable8mm](https://github.com/cable8mm) in https://github.com/cable8mm/bigkinds-php-client/pull/14
+* Add a CHANGELOG.md and revise a changelog action by [@cable8mm](https://github.com/cable8mm) in https://github.com/cable8mm/bigkinds-php-client/pull/15
+* Fix test folders and namespace by [@cable8mm](https://github.com/cable8mm) in https://github.com/cable8mm/bigkinds-php-client/pull/16
+
+**Full Changelog**: https://github.com/cable8mm/bigkinds-php-client/compare/0.2.0...v0.9.0
+
 ## v0.2.0 - 2023-07-18
 
 ## What's Changed
