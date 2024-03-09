@@ -34,8 +34,5 @@ jobs:
       - name: Install dependencies
         run: composer install --prefer-dist --no-progress --no-suggest
 
-      - name: Copy environment file
-        run: cp .env.example .env
-
       - name: Execute tests
         run: composer test
