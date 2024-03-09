@@ -10,6 +10,8 @@
 
 The Bigkinds PHP Client is a lightweight library for PHP. Using bigkinds-php-client makes code beautiful, elegant, and simple. It works with a Bigkinds Access Key, although this is optional.
 
+We have provided the API Documentation on the web. For more information, please visit https://www.palgle.com/bigkinds-php-client/ ❤️
+
 ## Install
 
 ```sh
