@@ -2,15 +2,15 @@
 
 namespace Cable8mm\BigkindsPhpClient;
 
+/**
+ * Facade class for BigkindsClient to be used conveniently.
+ */
 class Big
 {
     /**
      * Big::kinds Facade.
-     *
-     * @param  array  $options
-     * @return array
      */
-    public static function kinds(string $method, $options = [])
+    public static function kinds(string $method, array $options = []): array
     {
         $bigkinds = new BigkindsClient();
         $response = $bigkinds->request($method, $options);
