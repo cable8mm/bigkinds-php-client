@@ -1,5 +1,15 @@
 # Release Notes
 
+## v0.9.2 - 2024-03-09
+
+### What's Changed
+
+* Organizing various document wordings. by [@cable8mm](https://github.com/cable8mm) in https://github.com/cable8mm/bigkinds-php-client/pull/18
+* Organizing various documents and codes by [@cable8mm](https://github.com/cable8mm) in https://github.com/cable8mm/bigkinds-php-client/pull/19
+* Add deployments to GitHub Pages action by [@cable8mm](https://github.com/cable8mm) in https://github.com/cable8mm/bigkinds-php-client/pull/20
+
+**Full Changelog**: https://github.com/cable8mm/bigkinds-php-client/compare/v0.9.1...v0.9.2
+
 ## v0.9.1 - 2024-03-03
 
 ### What's Changed
