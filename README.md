@@ -1,12 +1,12 @@
 # Bigkinds Php Client
 
-[![PHP Linting (Pint)](https://github.com/cable8mm/bigkinds-php-client/actions/workflows/coding-style-php.yml/badge.svg)](https://github.com/cable8mm/bigkinds-php-client/actions/workflows/coding-style-php.yml)
-[![Tests](https://github.com/cable8mm/bigkinds-php-client/actions/workflows/tests.yml/badge.svg)](https://github.com/cable8mm/bigkinds-php-client/actions/workflows/tests.yml)
-[![update changelog](https://github.com/cable8mm/bigkinds-php-client/actions/workflows/update-changelog.yml/badge.svg)](https://github.com/cable8mm/bigkinds-php-client/actions/workflows/update-changelog.yml)
-![GitHub Release](https://img.shields.io/github/v/release/cable8mm/bigkinds-php-client?logo=packagist&color=F28D1A)
-![Packagist Downloads](https://img.shields.io/packagist/dt/cable8mm/bigkinds-php-client?logo=packagist&color=F28D1A)
-![minimum PHP version](https://img.shields.io/badge/php-%3E%3D_8.0-8892BF.svg?logo=php)
-![GitHub License](https://img.shields.io/github/license/cable8mm/bigkinds-php-client)
+[![code-style](https://github.com/cable8mm/bigkinds-php-client/actions/workflows/code-style.yml/badge.svg)](https://github.com/cable8mm/bigkinds-php-client/actions/workflows/code-style.yml)
+[![run-tests](https://github.com/cable8mm/bigkinds-php-client/actions/workflows/run-tests.yml/badge.svg)](https://github.com/cable8mm/bigkinds-php-client/actions/workflows/run-tests.yml)
+![Packagist Version](https://img.shields.io/packagist/v/cable8mm/bigkinds-php-client)
+![Packagist Downloads](https://img.shields.io/packagist/dt/cable8mm/bigkinds-php-client)
+![Packagist Dependency Version](https://img.shields.io/packagist/dependency-v/cable8mm/bigkinds-php-client/php)
+![Packagist Stars](https://img.shields.io/packagist/stars/cable8mm/bigkinds-php-client)
+![Packagist License](https://img.shields.io/packagist/l/cable8mm/bigkinds-php-client)
 
 The Bigkinds PHP Client is a lightweight library for PHP. Using bigkinds-php-client makes code beautiful, elegant, and simple. It works with a Bigkinds Access Key, although this is optional.
 
@@ -37,8 +37,12 @@ If you want to learn more about Bigkinds, visit https://www.bigkinds.or.kr/.
 
 ## Formatting
 
-```sh
+```bash
 composer lint
+# Modify all files to comply with the PSR-12.
+
+composer inspect
+# Inspect all files to ensure compliance with PSR-12.
 ```
 
 ## Test
