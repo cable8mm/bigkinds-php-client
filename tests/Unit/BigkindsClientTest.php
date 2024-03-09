@@ -14,11 +14,6 @@ class BigkindsClientTest extends TestCase
         $this->bigkindsClient = new BigkindsClient();
     }
 
-    public function testGetLibraryVersion()
-    {
-        $this->assertEquals($this->bigkindsClient->getLibraryVersion(), '0.1.0');
-    }
-
     public function testCreateBigkindsClient()
     {
         $this->assertInstanceOf(BigkindsClient::class, $this->bigkindsClient);

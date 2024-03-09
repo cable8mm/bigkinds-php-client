@@ -14,11 +14,6 @@ use GuzzleHttp\ClientInterface;
 class BigkindsClient
 {
     /**
-     * BigkindsClient library version.
-     */
-    const LIBVER = '0.1.0';
-
-    /**
      * Test Base Path from Guide.
      *
      * @var string
@@ -69,6 +64,9 @@ class BigkindsClient
         'keyword' => 'keyword',
     ];
 
+    /**
+     * Constructor.
+     */
     public function __construct(array $config = [], ?\GuzzleHttp\Client $http = null)
     {
         if (! empty($config)) {
@@ -84,16 +82,10 @@ class BigkindsClient
         $this->http = $http ?? new \GuzzleHttp\Client(['base_uri' => self::$base_path]);
     }
 
-    public function with(string $argumentName, $arguments = [])
-    {
-        return $this;
-    }
-
     /**
      * @param  array  $query  || nullable
-     * @return array
      */
-    public function request(string $method, array $query = [])
+    public function request(string $method, array $query = []): mixed
     {
         // guard
         if (! array_key_exists($method, self::$methods)) {
@@ -125,16 +117,6 @@ class BigkindsClient
         )->getBody();
 
         return json_decode($requestBody, true);
-    }
-
-    /**
-     * Get a string containing the version of the library.
-     *
-     * @return string
-     */
-    public function getLibraryVersion()
-    {
-        return self::LIBVER;
     }
 
     /**
